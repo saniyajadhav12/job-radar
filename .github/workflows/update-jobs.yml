@@ -1,0 +1,39 @@
+name: Update jobs
+
+on:
+  schedule:
+    - cron: "0 11 * * *"   # every day at 11:00 UTC (6-7 AM Boston time)
+  workflow_dispatch:         # lets you run it any time from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-jobs
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Fetch jobs
+        env:
+          JSEARCH_KEY: ${{ secrets.JSEARCH_KEY }}
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+          USAJOBS_KEY: ${{ secrets.USAJOBS_KEY }}
+          USAJOBS_EMAIL: ${{ secrets.USAJOBS_EMAIL }}
+        run: python fetch_jobs.py
+      - name: Save results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          git diff --cached --quiet || git commit -m "Update jobs $(date -u +%Y-%m-%d)"
+          git push
