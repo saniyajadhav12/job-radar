@@ -1,1 +1,579 @@
-{"generated_at":null,"sources":{}}
+{
+ "generated_at": "2026-11-03T04:27:56.230969+00:00",
+ "sources": {
+  "Twitch (Greenhouse)": {
+   "ok": true,
+   "count": 55
+  },
+  "Dropbox (Greenhouse)": {
+   "ok": true,
+   "count": 26
+  },
+  "Discord (Greenhouse)": {
+   "ok": true,
+   "count": 40
+  },
+  "Instacart (Greenhouse)": {
+   "ok": true,
+   "count": 94
+  },
+  "Duolingo (Greenhouse)": {
+   "ok": true,
+   "count": 54
+  },
+  "Squarespace (Greenhouse)": {
+   "ok": true,
+   "count": 26
+  },
+  "Lyft (Greenhouse)": {
+   "ok": true,
+   "count": 172
+  },
+  "Figma (Greenhouse)": {
+   "ok": true,
+   "count": 141
+  },
+  "Reddit (Greenhouse)": {
+   "ok": true,
+   "count": 163
+  },
+  "Pinterest (Greenhouse)": {
+   "ok": true,
+   "count": 168
+  },
+  "Robinhood (Greenhouse)": {
+   "ok": true,
+   "count": 162
+  },
+  "Chime (Greenhouse)": {
+   "ok": true,
+   "count": 74
+  },
+  "Asana (Greenhouse)": {
+   "ok": true,
+   "count": 108
+  },
+  "Gusto (Greenhouse)": {
+   "ok": true,
+   "count": 84
+  },
+  "Coinbase (Greenhouse)": {
+   "ok": true,
+   "count": 267
+  },
+  "Airtable (Greenhouse)": {
+   "ok": true,
+   "count": 5
+  },
+  "Airbnb (Greenhouse)": {
+   "ok": true,
+   "count": 212
+  },
+  "Vercel (Greenhouse)": {
+   "ok": true,
+   "count": 89
+  },
+  "Brex (Greenhouse)": {
+   "ok": true,
+   "count": 262
+  },
+  "Affirm (Greenhouse)": {
+   "ok": true,
+   "count": 237
+  },
+  "GitLab (Greenhouse)": {
+   "ok": true,
+   "count": 234
+  },
+  "Gemini (Greenhouse)": {
+   "ok": true,
+   "count": 29
+  },
+  "Webflow (Greenhouse)": {
+   "ok": true,
+   "count": 0
+  },
+  "MongoDB (Greenhouse)": {
+   "ok": true,
+   "count": 358
+  },
+  "Twilio (Greenhouse)": {
+   "ok": true,
+   "count": 134
+  },
+  "Faire (Greenhouse)": {
+   "ok": true,
+   "count": 64
+  },
+  "Datadog (Greenhouse)": {
+   "ok": true,
+   "count": 405
+  },
+  "Carta (Greenhouse)": {
+   "ok": true,
+   "count": 77
+  },
+  "Betterment (Greenhouse)": {
+   "ok": true,
+   "count": 27
+  },
+  "Scale AI (Greenhouse)": {
+   "ok": true,
+   "count": 166
+  },
+  "DraftKings (Greenhouse)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://boards-api.greenhouse.io/v1/boards/draftkings/jobs?content=true"
+  },
+  "Rapid7 (Greenhouse)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://boards-api.greenhouse.io/v1/boards/rapid7/jobs?content=true"
+  },
+  "PagerDuty (Greenhouse)": {
+   "ok": true,
+   "count": 49
+  },
+  "Flexport (Greenhouse)": {
+   "ok": true,
+   "count": 191
+  },
+  "Grammarly (Greenhouse)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://boards-api.greenhouse.io/v1/boards/grammarly/jobs?content=true"
+  },
+  "Zocdoc (Greenhouse)": {
+   "ok": true,
+   "count": 63
+  },
+  "Calendly (Greenhouse)": {
+   "ok": true,
+   "count": 8
+  },
+  "Roblox (Greenhouse)": {
+   "ok": true,
+   "count": 265
+  },
+  "Stripe (Greenhouse)": {
+   "ok": true,
+   "count": 739
+  },
+  "Lucid (Greenhouse)": {
+   "ok": true,
+   "count": 22
+  },
+  "Intercom (Greenhouse)": {
+   "ok": true,
+   "count": 109
+  },
+  "New Relic (Greenhouse)": {
+   "ok": true,
+   "count": 48
+  },
+  "Nuro (Greenhouse)": {
+   "ok": true,
+   "count": 93
+  },
+  "Peloton (Greenhouse)": {
+   "ok": true,
+   "count": 57
+  },
+  "Marqeta (Greenhouse)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://boards-api.greenhouse.io/v1/boards/marqeta/jobs?content=true"
+  },
+  "Samsara (Greenhouse)": {
+   "ok": true,
+   "count": 330
+  },
+  "Yext (Greenhouse)": {
+   "ok": true,
+   "count": 26
+  },
+  "Nextdoor (Greenhouse)": {
+   "ok": true,
+   "count": 20
+  },
+  "Postman (Greenhouse)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://boards-api.greenhouse.io/v1/boards/postman/jobs?content=true"
+  },
+  "Okta (Greenhouse)": {
+   "ok": true,
+   "count": 395
+  },
+  "SoFi (Greenhouse)": {
+   "ok": true,
+   "count": 63
+  },
+  "Klaviyo (Greenhouse)": {
+   "ok": true,
+   "count": 155
+  },
+  "Cockroach Labs (Greenhouse)": {
+   "ok": true,
+   "count": 10
+  },
+  "Toast (Greenhouse)": {
+   "ok": true,
+   "count": 344
+  },
+  "Hudson River Trading (Greenhouse)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://boards-api.greenhouse.io/v1/boards/hudsonrivertrading/jobs?content=true"
+  },
+  "Cloudflare (Greenhouse)": {
+   "ok": true,
+   "count": 469
+  },
+  "Sigma Computing (Greenhouse)": {
+   "ok": true,
+   "count": 77
+  },
+  "Abnormal Security (Greenhouse)": {
+   "ok": true,
+   "count": 82
+  },
+  "ezCater (Greenhouse)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://boards-api.greenhouse.io/v1/boards/ezcater/jobs?content=true"
+  },
+  "Motive (Greenhouse)": {
+   "ok": true,
+   "count": 171
+  },
+  "Wayfair (Greenhouse)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://boards-api.greenhouse.io/v1/boards/wayfair/jobs?content=true"
+  },
+  "HubSpot (Greenhouse)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://boards-api.greenhouse.io/v1/boards/hubspot/jobs?content=true"
+  },
+  "DataRobot (Greenhouse)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://boards-api.greenhouse.io/v1/boards/datarobot/jobs?content=true"
+  },
+  "Akuna Capital (Greenhouse)": {
+   "ok": true,
+   "count": 32
+  },
+  "Vimeo (Greenhouse)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://boards-api.greenhouse.io/v1/boards/vimeo/jobs?content=true"
+  },
+  "Etsy (Greenhouse)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://boards-api.greenhouse.io/v1/boards/etsy/jobs?content=true"
+  },
+  "Waymo (Greenhouse)": {
+   "ok": true,
+   "count": 370
+  },
+  "CarGurus (Greenhouse)": {
+   "ok": true,
+   "count": 40
+  },
+  "Niantic (Greenhouse)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://boards-api.greenhouse.io/v1/boards/niantic/jobs?content=true"
+  },
+  "Unity (Greenhouse)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://boards-api.greenhouse.io/v1/boards/unity3d/jobs?content=true"
+  },
+  "Rubrik (Greenhouse)": {
+   "ok": true,
+   "count": 157
+  },
+  "Ro (Greenhouse)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://boards-api.greenhouse.io/v1/boards/ro/jobs?content=true"
+  },
+  "Warby Parker (Greenhouse)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://boards-api.greenhouse.io/v1/boards/warbyparker/jobs?content=true"
+  },
+  "Fivetran (Greenhouse)": {
+   "ok": true,
+   "count": 157
+  },
+  "Chainalysis (Greenhouse)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://boards-api.greenhouse.io/v1/boards/chainalysis/jobs?content=true"
+  },
+  "LaunchDarkly (Greenhouse)": {
+   "ok": true,
+   "count": 45
+  },
+  "Mixpanel (Greenhouse)": {
+   "ok": true,
+   "count": 42
+  },
+  "Epic Games (Greenhouse)": {
+   "ok": true,
+   "count": 137
+  },
+  "Amplitude (Greenhouse)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://boards-api.greenhouse.io/v1/boards/amplitude/jobs?content=true"
+  },
+  "Formlabs (Greenhouse)": {
+   "ok": true,
+   "count": 236
+  },
+  "Contentful (Greenhouse)": {
+   "ok": true,
+   "count": 29
+  },
+  "Algolia (Greenhouse)": {
+   "ok": true,
+   "count": 26
+  },
+  "Plaid (Lever)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://api.lever.co/v0/postings/plaid?mode=json"
+  },
+  "Databricks (Greenhouse)": {
+   "ok": true,
+   "count": 910
+  },
+  "Netflix (Lever)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://api.lever.co/v0/postings/netflix?mode=json"
+  },
+  "Verkada (Greenhouse)": {
+   "ok": true,
+   "count": 337
+  },
+  "Riot Games (Greenhouse)": {
+   "ok": true,
+   "count": 182
+  },
+  "Oscar Health (Greenhouse)": {
+   "ok": true,
+   "count": 213
+  },
+  "WHOOP (Lever)": {
+   "ok": true,
+   "count": 0
+  },
+  "DoorDash (Greenhouse)": {
+   "ok": true,
+   "count": 433
+  },
+  "Elastic (Greenhouse)": {
+   "ok": true,
+   "count": 409
+  },
+  "Eventbrite (Lever)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://api.lever.co/v0/postings/eventbrite?mode=json"
+  },
+  "Anthropic (Greenhouse)": {
+   "ok": true,
+   "count": 677
+  },
+  "Spotify (Lever)": {
+   "ok": true,
+   "count": 85
+  },
+  "Outreach (Lever)": {
+   "ok": true,
+   "count": 20
+  },
+  "Notion (Ashby)": {
+   "ok": true,
+   "count": 146
+  },
+  "Linear (Ashby)": {
+   "ok": true,
+   "count": 31
+  },
+  "Deel (Ashby)": {
+   "ok": true,
+   "count": 0
+  },
+  "Supabase (Ashby)": {
+   "ok": true,
+   "count": 69
+  },
+  "PostHog (Ashby)": {
+   "ok": true,
+   "count": 10
+  },
+  "Cursor (Ashby)": {
+   "ok": true,
+   "count": 123
+  },
+  "Replit (Ashby)": {
+   "ok": true,
+   "count": 34
+  },
+  "Vanta (Ashby)": {
+   "ok": true,
+   "count": 81
+  },
+  "Ramp (Ashby)": {
+   "ok": true,
+   "count": 170
+  },
+  "Zoox (Lever)": {
+   "ok": true,
+   "count": 223
+  },
+  "Hex (Ashby)": {
+   "ok": true,
+   "count": 40
+  },
+  "Clay (Ashby)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://api.ashbyhq.com/posting-api/job-board/clay"
+  },
+  "Perplexity (Ashby)": {
+   "ok": true,
+   "count": 136
+  },
+  "Confluent (Ashby)": {
+   "ok": true,
+   "count": 0
+  },
+  "Cohere (Ashby)": {
+   "ok": true,
+   "count": 120
+  },
+  "ElevenLabs (Ashby)": {
+   "ok": true,
+   "count": 146
+  },
+  "Mercury (Ashby)": {
+   "ok": true,
+   "count": 0
+  },
+  "Retool (Ashby)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://api.ashbyhq.com/posting-api/job-board/retool"
+  },
+  "Zapier (Ashby)": {
+   "ok": true,
+   "count": 11
+  },
+  "Benchling (Ashby)": {
+   "ok": true,
+   "count": 51
+  },
+  "Runway (Ashby)": {
+   "ok": true,
+   "count": 3
+  },
+  "Watershed (Ashby)": {
+   "ok": true,
+   "count": 40
+  },
+  "Adzuna": {
+   "ok": false,
+   "count": 0,
+   "error": "ADZUNA_APP_ID / ADZUNA_APP_KEY secrets not set"
+  },
+  "Palantir (Lever)": {
+   "ok": true,
+   "count": 305
+  },
+  "Modal (Ashby)": {
+   "ok": true,
+   "count": 42
+  },
+  "Harvey (Ashby)": {
+   "ok": true,
+   "count": 374
+  },
+  "JSearch (Google for Jobs)": {
+   "ok": false,
+   "count": 0,
+   "error": "403 Client Error: Forbidden for url: https://jsearch.p.rapidapi.com/search?query=software+engineer+new+grad+in+United+States&page=1&num_pages=1&country=us&date_"
+  },
+  "Shield AI (Lever)": {
+   "ok": true,
+   "count": 656
+  },
+  "Remotive": {
+   "ok": true,
+   "count": 12
+  },
+  "Visa (Smartrecruiters)": {
+   "ok": true,
+   "count": 0
+  },
+  "OpenAI (Ashby)": {
+   "ok": true,
+   "count": 804
+  },
+  "SimplifyJobs New-Grad list": {
+   "ok": true,
+   "count": 3112
+  },
+  "Himalayas": {
+   "ok": true,
+   "count": 24
+  },
+  "USAJOBS": {
+   "ok": true,
+   "count": 37
+  },
+  "Remote OK": {
+   "ok": true,
+   "count": 99
+  },
+  "SpaceX (Greenhouse)": {
+   "ok": true,
+   "count": 2875
+  },
+  "Attentive (Lever)": {
+   "ok": false,
+   "count": 0,
+   "error": "404 Client Error: Not Found for url: https://api.lever.co/v0/postings/attentive?mode=json"
+  },
+  "Amazon Jobs": {
+   "ok": true,
+   "count": 200
+  },
+  "Anduril (Greenhouse)": {
+   "ok": true,
+   "count": 2560
+  },
+  "Wealthfront (Lever)": {
+   "ok": true,
+   "count": 22
+  },
+  "Veeva Systems (Lever)": {
+   "ok": true,
+   "count": 860
+  },
+  "Match Group (Lever)": {
+   "ok": true,
+   "count": 62
+  }
+ }
+}
