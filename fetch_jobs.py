@@ -223,8 +223,8 @@ def jsearch():
     headers = {"X-RapidAPI-Key": key, "X-RapidAPI-Host": "jsearch.p.rapidapi.com"}
     out = []
     for q in config.JSEARCH_QUERIES:
-        # JSearch v5: no "page" param (pagination uses "cursor"); jobs are under data.jobs
-        r = SESSION.get("https://jsearch.p.rapidapi.com/search", headers=headers, timeout=40,
+        # JSearch v5: endpoint is /search-v2 (old /search was retired); no "page" param (pagination uses "cursor"); jobs are under data.jobs
+        r = SESSION.get("https://jsearch.p.rapidapi.com/search-v2", headers=headers, timeout=40,
                         params={"query": q, "num_pages": 1, "country": "us", "language": "en",
                                 "date_posted": "3days"})
         if not r.ok:

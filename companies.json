@@ -115,24 +115,6 @@
     "Visa": "Visa"
   },
   "try": {
-    "DraftKings": [
-      "draftkings",
-      "draftkingsinc"
-    ],
-    "Rapid7": [
-      "rapid7"
-    ],
-    "Grammarly": [
-      "grammarly"
-    ],
-    "Marqeta": [
-      "marqeta"
-    ],
-    "Postman": [
-      "postman",
-      "postmanlabs",
-      "getpostman"
-    ],
     "Hudson River Trading": [
       "hudsonrivertrading",
       "hrt",
@@ -142,45 +124,19 @@
       "ezcater",
       "ezcaterinc"
     ],
-    "Wayfair": [
-      "wayfair"
-    ],
     "HubSpot": [
       "hubspot",
       "hubspotjobs"
-    ],
-    "DataRobot": [
-      "datarobot"
-    ],
-    "Vimeo": [
-      "vimeo",
-      "vimeoinc"
-    ],
-    "Etsy": [
-      "etsy"
     ],
     "Niantic": [
       "niantic",
       "nianticlabs",
       "nianticinc"
     ],
-    "Unity": [
-      "unity",
-      "unity3d",
-      "unitytechnologies"
-    ],
     "Ro": [
       "ro",
       "roman",
       "rohealth"
-    ],
-    "Warby Parker": [
-      "warbyparker",
-      "warby-parker"
-    ],
-    "Chainalysis": [
-      "chainalysis",
-      "chainalysisinc"
     ],
     "Amplitude": [
       "amplitude",
@@ -188,12 +144,6 @@
     ],
     "Plaid": [
       "plaid"
-    ],
-    "Netflix": [
-      "netflix"
-    ],
-    "Eventbrite": [
-      "eventbrite"
     ],
     "Attentive": [
       "attentive",
@@ -203,9 +153,6 @@
       "clay",
       "claylabs",
       "clay-labs"
-    ],
-    "Retool": [
-      "retool"
     ]
   }
 }
