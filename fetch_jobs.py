@@ -20,7 +20,11 @@ NOW = datetime.now(timezone.utc)
 SESSION = requests.Session()
 SESSION.headers["User-Agent"] = "job-radar/1.0 (personal job search tool)"
 
-STATUS = {}  # source label -> {"ok": bool, "count": int, "error": str}
+STATUS = {}  # source label -> {"ok": bool|None, "count": int, "error"/"note": str}
+
+
+class SkipSource(Exception):
+    """Raised when a source is intentionally turned off (e.g. its API key isn't set)."""
 
 
 # ---------------------------------------------------------------- helpers
@@ -80,9 +84,18 @@ def make(company, title, location, url, posted, desc, source, remote=False, spon
 
 def run_source(label, fn, *args):
     try:
-        jobs = fn(*args)
-        STATUS[label] = {"ok": True, "count": len(jobs)}
+        result = fn(*args)
+        if isinstance(result, tuple):  # (jobs, note) from probe()
+            jobs, note = result
+            STATUS[label] = {"ok": True, "count": len(jobs), "note": note}
+        else:
+            jobs = result
+            STATUS[label] = {"ok": True, "count": len(jobs)}
         return jobs
+    except SkipSource as e:
+        STATUS[label] = {"ok": None, "count": 0, "note": str(e)}
+        print(f"  - {label}: {e}")
+        return []
     except Exception as e:
         msg = str(e).split("\n")[0][:160]
         STATUS[label] = {"ok": False, "count": 0, "error": msg}
@@ -150,6 +163,18 @@ def smartrecruiters(slug, name):
     return out
 
 
+def probe(name, candidates):
+    """Try each candidate board ID on Greenhouse, Lever and Ashby; use the first that works."""
+    for slug in candidates:
+        for platform, fn in (("Greenhouse", greenhouse), ("Lever", lever), ("Ashby", ashby)):
+            try:
+                return fn(slug, name), f"found on {platform} as '{slug}'"
+            except requests.HTTPError:
+                continue
+    raise RuntimeError("not found on Greenhouse, Lever or Ashby (likely Workday or its own site); "
+                       "remove it from 'try' in companies.json")
+
+
 def amazon():
     out = []
     for q in config.AMAZON_QUERIES:
@@ -194,13 +219,20 @@ def simplify():
 def jsearch():
     key = os.environ.get("JSEARCH_KEY")
     if not key:
-        raise RuntimeError("JSEARCH_KEY secret not set")
+        raise SkipSource("turned off (JSEARCH_KEY secret not set)")
     headers = {"X-RapidAPI-Key": key, "X-RapidAPI-Host": "jsearch.p.rapidapi.com"}
     out = []
     for q in config.JSEARCH_QUERIES:
-        d = get_json("https://jsearch.p.rapidapi.com/search", headers=headers,
-                     params={"query": q, "page": 1, "num_pages": 1, "country": "us", "date_posted": "3days"})
-        for j in d.get("data", []) or []:
+        # JSearch v5: no "page" param (pagination uses "cursor"); jobs are under data.jobs
+        r = SESSION.get("https://jsearch.p.rapidapi.com/search", headers=headers, timeout=40,
+                        params={"query": q, "num_pages": 1, "country": "us", "language": "en",
+                                "date_posted": "3days"})
+        if not r.ok:
+            raise RuntimeError(f"HTTP {r.status_code}: {r.text[:200]}")
+        d = r.json()
+        data = d.get("data") or []
+        rows = data.get("jobs", []) if isinstance(data, dict) else data
+        for j in rows:
             loc = ", ".join(x for x in [j.get("job_city"), j.get("job_state"), j.get("job_country")] if x)
             pub = j.get("job_publisher") or "web"
             out.append(make(j.get("employer_name"), j.get("job_title"), loc, j.get("job_apply_link"),
@@ -212,7 +244,7 @@ def jsearch():
 def adzuna():
     app_id, app_key = os.environ.get("ADZUNA_APP_ID"), os.environ.get("ADZUNA_APP_KEY")
     if not (app_id and app_key):
-        raise RuntimeError("ADZUNA_APP_ID / ADZUNA_APP_KEY secrets not set")
+        raise SkipSource("turned off (Adzuna keys not set)")
     out = []
     for q in config.ADZUNA_QUERIES:
         for page in (1, 2):
@@ -229,7 +261,7 @@ def adzuna():
 def usajobs():
     key, email = os.environ.get("USAJOBS_KEY"), os.environ.get("USAJOBS_EMAIL")
     if not (key and email):
-        raise RuntimeError("USAJOBS_KEY / USAJOBS_EMAIL secrets not set")
+        raise SkipSource("turned off (USAJOBS secrets not set)")
     headers = {"Host": "data.usajobs.gov", "User-Agent": email, "Authorization-Key": key}
     out = []
     for q in config.USAJOBS_QUERIES:
@@ -388,6 +420,8 @@ def main():
     for kind, fn in board_fns.items():
         for slug, name in (companies.get(kind) or {}).items():
             tasks.append((f"{name} ({kind.title()})", fn, slug, name))
+    for name, candidates in (companies.get("try") or {}).items():
+        tasks.append((f"{name} (auto-detect)", probe, name, candidates))
     for label, fn in [("Amazon Jobs", amazon), ("SimplifyJobs New-Grad list", simplify),
                       ("JSearch (Google for Jobs)", jsearch), ("Adzuna", adzuna), ("USAJOBS", usajobs),
                       ("Himalayas", himalayas), ("Remotive", remotive), ("Remote OK", remoteok)]:
@@ -454,7 +488,8 @@ def main():
     json.dump({"generated_at": NOW.isoformat(), "sources": STATUS},
               open(os.path.join(DOCS, "status.json"), "w"), indent=1)
     ok = sum(1 for s in STATUS.values() if s["ok"])
-    print(f"Kept {len(out)} jobs. Sources OK: {ok}/{len(STATUS)}")
+    off = sum(1 for s in STATUS.values() if s["ok"] is None)
+    print(f"Kept {len(out)} jobs. Sources OK: {ok}/{len(STATUS) - off} ({off} turned off)")
 
 
 if __name__ == "__main__":

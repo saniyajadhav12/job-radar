@@ -1,47 +1,211 @@
 {
-  "_note": "Company careers boards to pull from. Key = the company's board ID (the part of their careers URL), value = display name. Add or remove lines freely. Sources that fail are listed at the bottom of the portal.",
+  "_note": "Company careers boards to pull from. Key = the company's board ID (from its careers URL), value = display name. The 'try' section lists companies whose board ID isn't confirmed: each candidate ID is tried on Greenhouse, Lever and Ashby, and the portal's Sources list shows where each one was found. Companies not found on any of them probably use Workday or their own site; delete them from 'try'.",
   "greenhouse": {
-    "airbnb": "Airbnb", "stripe": "Stripe", "twitch": "Twitch", "figma": "Figma",
-    "datadog": "Datadog", "robinhood": "Robinhood", "dropbox": "Dropbox", "pinterest": "Pinterest",
-    "lyft": "Lyft", "instacart": "Instacart", "coinbase": "Coinbase", "discord": "Discord",
-    "gitlab": "GitLab", "cloudflare": "Cloudflare", "mongodb": "MongoDB", "reddit": "Reddit",
-    "duolingo": "Duolingo", "asana": "Asana", "squarespace": "Squarespace", "affirm": "Affirm",
-    "brex": "Brex", "chime": "Chime", "gusto": "Gusto", "databricks": "Databricks",
-    "samsara": "Samsara", "okta": "Okta", "twilio": "Twilio", "vercel": "Vercel",
-    "airtable": "Airtable", "toast": "Toast", "roblox": "Roblox", "scaleai": "Scale AI",
-    "anthropic": "Anthropic", "flexport": "Flexport", "faire": "Faire", "gemini": "Gemini",
-    "carta": "Carta", "webflow": "Webflow", "intercom": "Intercom", "pagerduty": "PagerDuty",
-    "betterment": "Betterment", "zocdoc": "Zocdoc", "klaviyo": "Klaviyo", "draftkings": "DraftKings",
-    "rapid7": "Rapid7", "doordashusa": "DoorDash", "nuro": "Nuro", "grammarly": "Grammarly",
-    "calendly": "Calendly", "elastic": "Elastic", "newrelic": "New Relic", "lucidsoftware": "Lucid",
-    "peloton": "Peloton", "spacex": "SpaceX", "andurilindustries": "Anduril", "waymo": "Waymo",
-    "nextdoor": "Nextdoor", "yext": "Yext", "sofi": "SoFi", "marqeta": "Marqeta",
-    "fivetran": "Fivetran", "postman": "Postman", "gomotive": "Motive", "verkada": "Verkada",
-    "rubrik": "Rubrik", "cockroachlabs": "Cockroach Labs", "sigmacomputing": "Sigma Computing",
-    "abnormalsecurity": "Abnormal Security", "hudsonrivertrading": "Hudson River Trading",
-    "akunacapital": "Akuna Capital", "ezcater": "ezCater", "cargurus": "CarGurus",
-    "formlabs": "Formlabs", "hubspot": "HubSpot", "wayfair": "Wayfair", "datarobot": "DataRobot",
-    "vimeo": "Vimeo", "etsy": "Etsy", "epicgames": "Epic Games",
-    "riotgames": "Riot Games", "niantic": "Niantic", "unity3d": "Unity", "warbyparker": "Warby Parker",
-    "oscar": "Oscar Health", "ro": "Ro", "chainalysis": "Chainalysis", "launchdarkly": "LaunchDarkly",
-    "mixpanel": "Mixpanel", "amplitude": "Amplitude", "contentful": "Contentful", "algolia": "Algolia"
+    "airbnb": "Airbnb",
+    "stripe": "Stripe",
+    "twitch": "Twitch",
+    "figma": "Figma",
+    "datadog": "Datadog",
+    "robinhood": "Robinhood",
+    "dropbox": "Dropbox",
+    "pinterest": "Pinterest",
+    "lyft": "Lyft",
+    "instacart": "Instacart",
+    "coinbase": "Coinbase",
+    "discord": "Discord",
+    "gitlab": "GitLab",
+    "cloudflare": "Cloudflare",
+    "mongodb": "MongoDB",
+    "reddit": "Reddit",
+    "duolingo": "Duolingo",
+    "asana": "Asana",
+    "squarespace": "Squarespace",
+    "affirm": "Affirm",
+    "brex": "Brex",
+    "chime": "Chime",
+    "gusto": "Gusto",
+    "databricks": "Databricks",
+    "samsara": "Samsara",
+    "okta": "Okta",
+    "twilio": "Twilio",
+    "vercel": "Vercel",
+    "airtable": "Airtable",
+    "toast": "Toast",
+    "roblox": "Roblox",
+    "scaleai": "Scale AI",
+    "anthropic": "Anthropic",
+    "flexport": "Flexport",
+    "faire": "Faire",
+    "gemini": "Gemini",
+    "carta": "Carta",
+    "webflow": "Webflow",
+    "intercom": "Intercom",
+    "pagerduty": "PagerDuty",
+    "betterment": "Betterment",
+    "zocdoc": "Zocdoc",
+    "klaviyo": "Klaviyo",
+    "doordashusa": "DoorDash",
+    "nuro": "Nuro",
+    "calendly": "Calendly",
+    "elastic": "Elastic",
+    "newrelic": "New Relic",
+    "lucidsoftware": "Lucid",
+    "peloton": "Peloton",
+    "spacex": "SpaceX",
+    "andurilindustries": "Anduril",
+    "waymo": "Waymo",
+    "nextdoor": "Nextdoor",
+    "yext": "Yext",
+    "sofi": "SoFi",
+    "fivetran": "Fivetran",
+    "gomotive": "Motive",
+    "verkada": "Verkada",
+    "rubrik": "Rubrik",
+    "cockroachlabs": "Cockroach Labs",
+    "sigmacomputing": "Sigma Computing",
+    "abnormalsecurity": "Abnormal Security",
+    "akunacapital": "Akuna Capital",
+    "cargurus": "CarGurus",
+    "formlabs": "Formlabs",
+    "epicgames": "Epic Games",
+    "riotgames": "Riot Games",
+    "oscar": "Oscar Health",
+    "launchdarkly": "LaunchDarkly",
+    "mixpanel": "Mixpanel",
+    "contentful": "Contentful",
+    "algolia": "Algolia"
   },
   "lever": {
-    "plaid": "Plaid", "palantir": "Palantir", "netflix": "Netflix", "spotify": "Spotify",
-    "shieldai": "Shield AI", "whoop": "WHOOP", "attentive": "Attentive", "zoox": "Zoox",
-    "outreach": "Outreach", "wealthfront": "Wealthfront", "veeva": "Veeva Systems",
-    "matchgroup": "Match Group", "eventbrite": "Eventbrite"
+    "palantir": "Palantir",
+    "spotify": "Spotify",
+    "shieldai": "Shield AI",
+    "whoop": "WHOOP",
+    "zoox": "Zoox",
+    "outreach": "Outreach",
+    "wealthfront": "Wealthfront",
+    "veeva": "Veeva Systems",
+    "matchgroup": "Match Group"
   },
   "ashby": {
-    "notion": "Notion", "ramp": "Ramp", "linear": "Linear", "openai": "OpenAI",
-    "cursor": "Cursor", "supabase": "Supabase", "posthog": "PostHog", "deel": "Deel",
-    "vanta": "Vanta", "replit": "Replit", "perplexity": "Perplexity", "cohere": "Cohere",
-    "elevenlabs": "ElevenLabs", "harvey": "Harvey", "hex": "Hex", "clay": "Clay",
-    "zapier": "Zapier", "confluent": "Confluent", "retool": "Retool", "mercury": "Mercury",
-    "benchling": "Benchling", "watershed": "Watershed", "modal": "Modal", "runway": "Runway"
+    "notion": "Notion",
+    "ramp": "Ramp",
+    "linear": "Linear",
+    "openai": "OpenAI",
+    "cursor": "Cursor",
+    "supabase": "Supabase",
+    "posthog": "PostHog",
+    "deel": "Deel",
+    "vanta": "Vanta",
+    "replit": "Replit",
+    "perplexity": "Perplexity",
+    "cohere": "Cohere",
+    "elevenlabs": "ElevenLabs",
+    "harvey": "Harvey",
+    "hex": "Hex",
+    "zapier": "Zapier",
+    "confluent": "Confluent",
+    "mercury": "Mercury",
+    "benchling": "Benchling",
+    "watershed": "Watershed",
+    "modal": "Modal",
+    "runway": "Runway"
   },
   "workable": {},
   "smartrecruiters": {
     "Visa": "Visa"
+  },
+  "try": {
+    "DraftKings": [
+      "draftkings",
+      "draftkingsinc"
+    ],
+    "Rapid7": [
+      "rapid7"
+    ],
+    "Grammarly": [
+      "grammarly"
+    ],
+    "Marqeta": [
+      "marqeta"
+    ],
+    "Postman": [
+      "postman",
+      "postmanlabs",
+      "getpostman"
+    ],
+    "Hudson River Trading": [
+      "hudsonrivertrading",
+      "hrt",
+      "wehrtyou"
+    ],
+    "ezCater": [
+      "ezcater",
+      "ezcaterinc"
+    ],
+    "Wayfair": [
+      "wayfair"
+    ],
+    "HubSpot": [
+      "hubspot",
+      "hubspotjobs"
+    ],
+    "DataRobot": [
+      "datarobot"
+    ],
+    "Vimeo": [
+      "vimeo",
+      "vimeoinc"
+    ],
+    "Etsy": [
+      "etsy"
+    ],
+    "Niantic": [
+      "niantic",
+      "nianticlabs",
+      "nianticinc"
+    ],
+    "Unity": [
+      "unity",
+      "unity3d",
+      "unitytechnologies"
+    ],
+    "Ro": [
+      "ro",
+      "roman",
+      "rohealth"
+    ],
+    "Warby Parker": [
+      "warbyparker",
+      "warby-parker"
+    ],
+    "Chainalysis": [
+      "chainalysis",
+      "chainalysisinc"
+    ],
+    "Amplitude": [
+      "amplitude",
+      "amplitudeinc"
+    ],
+    "Plaid": [
+      "plaid"
+    ],
+    "Netflix": [
+      "netflix"
+    ],
+    "Eventbrite": [
+      "eventbrite"
+    ],
+    "Attentive": [
+      "attentive",
+      "attentivemobile"
+    ],
+    "Clay": [
+      "clay",
+      "claylabs",
+      "clay-labs"
+    ],
+    "Retool": [
+      "retool"
+    ]
   }
 }

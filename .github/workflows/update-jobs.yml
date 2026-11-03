@@ -17,8 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+        with:
+          ref: main            # always start from the latest code, even on "Re-run"
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
@@ -34,6 +36,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          # Move onto the newest commit (keeping the fresh data files), then save only docs/
+          git fetch origin main
+          git reset --mixed origin/main
           git add docs/
           git diff --cached --quiet || git commit -m "Update jobs $(date -u +%Y-%m-%d)"
-          git push
+          git push origin HEAD:main

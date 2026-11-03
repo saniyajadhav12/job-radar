@@ -94,6 +94,7 @@ footer{border-top:1px solid var(--line);padding:20px 0 40px;color:var(--muted);f
 footer summary{cursor:pointer;color:var(--ink);font-weight:500}
 footer ul{columns:2 260px;padding-left:18px}
 footer .bad{color:var(--warn)}
+footer .off{opacity:.7}
 
 @media (max-width:680px){
   li.job{grid-template-columns:60px 1fr;gap:12px}
@@ -308,12 +309,17 @@ footer .bad{color:var(--warn)}
   function fillSources(st){
     const entries = Object.entries(st.sources || {});
     if(!entries.length){ $('#srcSummary').textContent = 'Sources'; return; }
-    const ok = entries.filter(([,v]) => v.ok).length;
-    $('#srcSummary').textContent = `Sources: ${ok} of ${entries.length} responded on the last update`;
-    entries.sort((a,b) => (a[1].ok - b[1].ok) || a[0].localeCompare(b[0]));
-    $('#srcList').innerHTML = entries.map(([k,v]) => v.ok
-      ? `<li>${esc(k)}: ${v.count} postings</li>`
-      : `<li class="bad">${esc(k)}: failed (${esc(v.error)})</li>`).join('');
+    const active = entries.filter(([,v]) => v.ok !== null);
+    const ok = active.filter(([,v]) => v.ok).length;
+    const off = entries.length - active.length;
+    $('#srcSummary').textContent = `Sources: ${ok} of ${active.length} responded on the last update` + (off ? `, ${off} turned off` : '');
+    const rank = v => v.ok === false ? 0 : v.ok === null ? 2 : 1;
+    entries.sort((a,b) => (rank(a[1]) - rank(b[1])) || a[0].localeCompare(b[0]));
+    $('#srcList').innerHTML = entries.map(([k,v]) => {
+      if(v.ok === null) return `<li class="off">${esc(k)}: ${esc(v.note || 'turned off')}</li>`;
+      if(!v.ok) return `<li class="bad">${esc(k)}: failed (${esc(v.error)})</li>`;
+      return `<li>${esc(k)}: ${v.count} postings${v.note ? ' (' + esc(v.note) + ')' : ''}</li>`;
+    }).join('');
   }
 
   Promise.all([
