@@ -315,8 +315,9 @@ def remoteok():
 
 # ---------------------------------------------------------------- filtering
 INCLUDE = re.compile(config.INCLUDE_TITLE, re.I)
-ROLE = re.compile(config.ROLE_WORD, re.I)
 EXCLUDE = re.compile(config.EXCLUDE_TITLE, re.I)
+SPECIALTY = re.compile(config.SPECIALTY_EXCLUDE, re.I)
+KEEP_EVEN_IF = re.compile(config.KEEP_EVEN_IF, re.I)
 LEVEL_II = re.compile(r"\b(engineer|developer|sde)\s*(ii|2)\b|\bsde[\s-]?(ii|2)\b|\blevel\s*2\b", re.I)
 NEW_GRAD = re.compile(r"new grad|graduate|early career|university|entry|associate|junior|\bjr\b|"
                       r"\b(engineer|developer|sde)\s*(i|1)\b|\bsde[\s-]?(i|1)\b|\blevel\s*1\b|202[6-7]", re.I)
@@ -402,7 +403,9 @@ def rank(src):
 
 def keep(job):
     t = job["title"]
-    if not job["url"] or not t or not INCLUDE.search(t) or not ROLE.search(t) or EXCLUDE.search(t):
+    if not job["url"] or not t or not INCLUDE.search(t) or EXCLUDE.search(t):
+        return False
+    if SPECIALTY.search(t) and not KEEP_EVEN_IF.search(t):
         return False
     if not is_us(job["location"], job["remote"]):
         return False

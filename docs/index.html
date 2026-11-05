@@ -137,6 +137,12 @@ footer .off{opacity:.7}
         <option value="II">Level II</option>
         <option value="Unspecified">Level not stated</option>
       </select>
+      <select id="minfit" aria-label="Minimum fit">
+        <option value="0">Any fit</option>
+        <option value="20">Fit 20+</option>
+        <option value="40">Fit 40+</option>
+        <option value="60">Fit 60+</option>
+      </select>
       <select id="sort" aria-label="Sort">
         <option value="new">Newest first</option>
         <option value="fit">Best fit first</option>
@@ -144,7 +150,7 @@ footer .off{opacity:.7}
     </div>
     <div class="row">
       <label class="chk"><input type="checkbox" id="onlyNew"> New today only</label>
-      <label class="chk"><input type="checkbox" id="hideVisa"> Hide no-sponsorship &amp; citizenship-required</label>
+      <label class="chk"><input type="checkbox" id="hideVisa" checked> Hide no-sponsorship &amp; citizenship-required</label>
       <div class="tabs" role="tablist">
         <button role="tab" data-tab="open" aria-selected="true">Open <span id="nOpen"></span></button>
         <button role="tab" data-tab="applied" aria-selected="false">Applied <span id="nApplied"></span></button>
@@ -199,6 +205,7 @@ footer .off{opacity:.7}
     const q = $('#q').value.trim().toLowerCase();
     const co = $('#company').value, loc = $('#loc').value, lvl = $('#level').value;
     const onlyNew = $('#onlyNew').checked, hideVisa = $('#hideVisa').checked;
+    const minFit = +$('#minfit').value;
     let list = jobs.filter(j => {
       const isA = !!applied[j.id], isH = !!hidden[j.id];
       if(tab === 'open' && (isA || isH)) return false;
@@ -211,6 +218,7 @@ footer .off{opacity:.7}
       if(lvl && j.level !== lvl) return false;
       if(onlyNew && !j.new) return false;
       if(hideVisa && (j.sponsor === 'no_sponsorship' || j.sponsor === 'citizenship')) return false;
+      if(minFit && j.fit != null && j.fit < minFit) return false;
       if(q && !(`${j.title} ${j.company} ${j.location} ${(j.matched||[]).join(' ')}`.toLowerCase().includes(q))) return false;
       return true;
     });
@@ -282,8 +290,24 @@ footer .off{opacity:.7}
     }
     render();
   });
-  ['#q','#company','#loc','#level','#sort','#onlyNew','#hideVisa'].forEach(s =>
-    $(s).addEventListener(s === '#q' ? 'input' : 'change', () => { limit = 100; render(); }));
+  // Remember filter choices between visits (search text is not saved)
+  const SAVED = ['#company','#loc','#level','#minfit','#sort','#onlyNew','#hideVisa'];
+  function saveFilters(){
+    const f = {};
+    SAVED.forEach(s => { const el = $(s); f[s] = el.type === 'checkbox' ? el.checked : el.value; });
+    store.save('jr-filters', f);
+  }
+  function restoreFilters(){
+    const f = store.load('jr-filters');
+    SAVED.forEach(s => {
+      if(!(s in f)) return;
+      const el = $(s);
+      if(el.type === 'checkbox') el.checked = !!f[s];
+      else if([...el.options].some(o => o.value === f[s])) el.value = f[s];
+    });
+  }
+  ['#q', ...SAVED].forEach(s =>
+    $(s).addEventListener(s === '#q' ? 'input' : 'change', () => { limit = 100; if(s !== '#q') saveFilters(); render(); }));
   document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => {
     tab = b.dataset.tab; limit = 100;
     document.querySelectorAll('.tabs button').forEach(x => x.setAttribute('aria-selected', x === b));
@@ -332,7 +356,7 @@ footer .off{opacity:.7}
     $('#heroText').textContent = data.generated_at
       ? `${jobs.length.toLocaleString()} entry-level US software roles across ${new Set(jobs.map(j => j.company)).size} companies. Updated ${fmtDate(data.generated_at)}.`
       : 'Run the “Update jobs” workflow once to load the first batch.';
-    fillFilters(); fillSources(st); render();
+    fillFilters(); restoreFilters(); fillSources(st); render();
   }).catch(() => {
     $('#heroNum').textContent = 'Couldn’t load';
     $('#heroText').textContent = 'jobs.json is missing or unreadable. Check the latest “Update jobs” run in the Actions tab.';

@@ -1,20 +1,36 @@
 """Settings for Job Radar. Edit this file to change what the portal shows."""
 
 # ---------- Titles ----------
-# A posting is kept only if its title matches INCLUDE_TITLE and ROLE_WORD,
-# and does NOT match EXCLUDE_TITLE.
+# A posting is kept only if its title matches INCLUDE_TITLE and does NOT match EXCLUDE_TITLE.
+# Role types kept: general software engineer/developer, full-stack, front-end, mobile.
 INCLUDE_TITLE = (
-    r"\b(software|sde|swe|full[\s-]?stack|front[\s-]?end|frontend|web|"
-    r"applications?|ui|react|product)\b|it specialist \(appsw"
+    r"\bsoftware (engineer|developer|development engineer|dev)\b"
+    r"|\b(sde|swe)\b"
+    r"|\bfull[\s-]?stack\b"
+    r"|\b(front[\s-]?end|frontend)\b"
+    r"|\bweb (developer|engineer)\b"
+    r"|\bapplications? (developer|engineer)\b"
+    r"|\bui (developer|engineer)\b"
+    r"|\bproduct engineer\b"
+    r"|\b(ios|android|mobile|react native) (engineer|developer)\b"
+    r"|it specialist \(appsw"
 )
-ROLE_WORD = r"\b(engineer|developer|sde|swe|programmer|appsw)"
 EXCLUDE_TITLE = (
     r"\b(senior|sr|staff|principal|lead|manager|director|head|architect|vp|"
     r"intern|internship|co-?op|apprentice|distinguished|fellow|contractor|"
-    r"part[\s-]?time|sales|support|solutions|test|qa|sdet|recruiter|"
+    r"part[\s-]?time|sales|support|solutions|recruiter|"
     r"iii|iv|level\s*[3-9])\b"
     r"|\b(engineer|developer|sde)\s*(3|4|5|6|v)\b"
 )
+# Specialties you don't want. Skipped when the title also says full-stack / front-end / mobile,
+# so "Full Stack Engineer (Frontend + Backend)" is still kept.
+SPECIALTY_EXCLUDE = (
+    r"\b(back[\s-]?end|data|machine learning|ml|ai/ml|infrastructure|devops|sre|"
+    r"site reliability|security|embedded|firmware|hardware|network|networking|kernel|compiler|"
+    r"gpu|robotics|autonomy|simulation|test|testing|qa|sdet|quality|mechanical|electrical|"
+    r"manufacturing|sourcing|supply chain|field|salesforce|mainframe|cobol)\b"
+)
+KEEP_EVEN_IF = r"\bfull[\s-]?stack\b|\b(front[\s-]?end|frontend)\b|\b(ios|android|mobile|react native)\b"
 
 # ---------- Freshness ----------
 MAX_AGE_DAYS = 30          # drop postings older than this (when a date is known)
