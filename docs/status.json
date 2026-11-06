@@ -1,161 +1,161 @@
 {
- "generated_at": "2026-11-05T18:28:07.543385+00:00",
+ "generated_at": "2026-11-06T17:47:50.980098+00:00",
  "sources": {
-  "Discord (Greenhouse)": {
-   "ok": true,
-   "count": 27
-  },
   "Dropbox (Greenhouse)": {
    "ok": true,
-   "count": 32
+   "count": 33
   },
   "Twitch (Greenhouse)": {
    "ok": true,
-   "count": 64
+   "count": 59
   },
-  "Duolingo (Greenhouse)": {
+  "Discord (Greenhouse)": {
    "ok": true,
-   "count": 55
-  },
-  "Squarespace (Greenhouse)": {
-   "ok": true,
-   "count": 22
+   "count": 26
   },
   "Instacart (Greenhouse)": {
    "ok": true,
-   "count": 90
+   "count": 89
   },
-  "Lyft (Greenhouse)": {
+  "Squarespace (Greenhouse)": {
    "ok": true,
-   "count": 172
-  },
-  "Pinterest (Greenhouse)": {
-   "ok": true,
-   "count": 165
+   "count": 21
   },
   "Figma (Greenhouse)": {
    "ok": true,
-   "count": 143
+   "count": 145
+  },
+  "Lyft (Greenhouse)": {
+   "ok": true,
+   "count": 167
+  },
+  "Duolingo (Greenhouse)": {
+   "ok": true,
+   "count": 58
   },
   "Robinhood (Greenhouse)": {
    "ok": true,
-   "count": 151
-  },
-  "Asana (Greenhouse)": {
-   "ok": true,
-   "count": 111
+   "count": 152
   },
   "Reddit (Greenhouse)": {
    "ok": true,
-   "count": 165
+   "count": 161
+  },
+  "Pinterest (Greenhouse)": {
+   "ok": true,
+   "count": 166
   },
   "Gusto (Greenhouse)": {
    "ok": true,
-   "count": 83
+   "count": 81
   },
-  "Coinbase (Greenhouse)": {
+  "Asana (Greenhouse)": {
    "ok": true,
-   "count": 278
-  },
-  "Airtable (Greenhouse)": {
-   "ok": true,
-   "count": 5
-  },
-  "Chime (Greenhouse)": {
-   "ok": true,
-   "count": 74
+   "count": 108
   },
   "Airbnb (Greenhouse)": {
    "ok": true,
    "count": 203
   },
+  "Chime (Greenhouse)": {
+   "ok": true,
+   "count": 73
+  },
+  "Airtable (Greenhouse)": {
+   "ok": true,
+   "count": 5
+  },
+  "Coinbase (Greenhouse)": {
+   "ok": true,
+   "count": 283
+  },
   "Vercel (Greenhouse)": {
    "ok": true,
-   "count": 88
-  },
-  "Brex (Greenhouse)": {
-   "ok": true,
-   "count": 271
-  },
-  "Affirm (Greenhouse)": {
-   "ok": true,
-   "count": 237
+   "count": 85
   },
   "GitLab (Greenhouse)": {
    "ok": true,
-   "count": 244
+   "count": 245
+  },
+  "Brex (Greenhouse)": {
+   "ok": true,
+   "count": 272
   },
   "MongoDB (Greenhouse)": {
    "ok": true,
-   "count": 365
+   "count": 371
   },
-  "Twilio (Greenhouse)": {
+  "Datadog (Greenhouse)": {
    "ok": true,
-   "count": 124
+   "count": 396
   },
   "Gemini (Greenhouse)": {
    "ok": true,
-   "count": 29
+   "count": 27
+  },
+  "Twilio (Greenhouse)": {
+   "ok": true,
+   "count": 127
   },
   "Webflow (Greenhouse)": {
    "ok": true,
    "count": 0
   },
+  "Affirm (Greenhouse)": {
+   "ok": true,
+   "count": 236
+  },
   "Faire (Greenhouse)": {
    "ok": true,
-   "count": 66
+   "count": 65
   },
   "Carta (Greenhouse)": {
    "ok": true,
-   "count": 78
-  },
-  "Datadog (Greenhouse)": {
-   "ok": true,
-   "count": 395
+   "count": 79
   },
   "Betterment (Greenhouse)": {
    "ok": true,
    "count": 26
   },
-  "Scale AI (Greenhouse)": {
-   "ok": true,
-   "count": 166
-  },
   "PagerDuty (Greenhouse)": {
    "ok": true,
-   "count": 48
+   "count": 47
+  },
+  "Scale AI (Greenhouse)": {
+   "ok": true,
+   "count": 173
   },
   "Calendly (Greenhouse)": {
    "ok": true,
    "count": 7
   },
-  "Roblox (Greenhouse)": {
-   "ok": true,
-   "count": 272
-  },
-  "Zocdoc (Greenhouse)": {
-   "ok": true,
-   "count": 63
-  },
   "Intercom (Greenhouse)": {
    "ok": true,
-   "count": 108
+   "count": 109
+  },
+  "Roblox (Greenhouse)": {
+   "ok": true,
+   "count": 271
   },
   "Stripe (Greenhouse)": {
    "ok": true,
-   "count": 762
+   "count": 765
   },
   "Lucid (Greenhouse)": {
    "ok": true,
-   "count": 24
+   "count": 26
   },
-  "Flexport (Greenhouse)": {
+  "Zocdoc (Greenhouse)": {
    "ok": true,
-   "count": 190
+   "count": 65
   },
   "Nuro (Greenhouse)": {
    "ok": true,
-   "count": 93
+   "count": 94
+  },
+  "Flexport (Greenhouse)": {
+   "ok": true,
+   "count": 192
   },
   "New Relic (Greenhouse)": {
    "ok": true,
@@ -163,95 +163,95 @@
   },
   "Peloton (Greenhouse)": {
    "ok": true,
-   "count": 47
+   "count": 46
   },
   "Nextdoor (Greenhouse)": {
    "ok": true,
    "count": 21
   },
+  "Samsara (Greenhouse)": {
+   "ok": true,
+   "count": 311
+  },
   "Yext (Greenhouse)": {
    "ok": true,
    "count": 30
   },
-  "Samsara (Greenhouse)": {
+  "Okta (Greenhouse)": {
    "ok": true,
-   "count": 314
-  },
-  "SoFi (Greenhouse)": {
-   "ok": true,
-   "count": 52
+   "count": 378
   },
   "Toast (Greenhouse)": {
    "ok": true,
-   "count": 336
+   "count": 330
+  },
+  "SoFi (Greenhouse)": {
+   "ok": true,
+   "count": 45
   },
   "Cockroach Labs (Greenhouse)": {
    "ok": true,
-   "count": 9
-  },
-  "Okta (Greenhouse)": {
-   "ok": true,
-   "count": 388
+   "count": 12
   },
   "Klaviyo (Greenhouse)": {
    "ok": true,
-   "count": 154
+   "count": 152
   },
   "Akuna Capital (Greenhouse)": {
    "ok": true,
-   "count": 32
-  },
-  "Sigma Computing (Greenhouse)": {
-   "ok": true,
-   "count": 79
+   "count": 31
   },
   "Abnormal Security (Greenhouse)": {
    "ok": true,
-   "count": 85
-  },
-  "Motive (Greenhouse)": {
-   "ok": true,
-   "count": 178
-  },
-  "Rubrik (Greenhouse)": {
-   "ok": true,
-   "count": 150
+   "count": 86
   },
   "Cloudflare (Greenhouse)": {
    "ok": true,
    "count": 463
   },
+  "Sigma Computing (Greenhouse)": {
+   "ok": true,
+   "count": 79
+  },
   "CarGurus (Greenhouse)": {
    "ok": true,
    "count": 43
   },
+  "Motive (Greenhouse)": {
+   "ok": true,
+   "count": 183
+  },
+  "Rubrik (Greenhouse)": {
+   "ok": true,
+   "count": 150
+  },
   "Waymo (Greenhouse)": {
    "ok": true,
-   "count": 367
+   "count": 366
+  },
+  "LaunchDarkly (Greenhouse)": {
+   "ok": true,
+   "count": 43
+  },
+  "Mixpanel (Greenhouse)": {
+   "ok": true,
+   "count": 40
   },
   "Contentful (Greenhouse)": {
    "ok": true,
    "count": 29
   },
-  "LaunchDarkly (Greenhouse)": {
-   "ok": true,
-   "count": 45
-  },
-  "Mixpanel (Greenhouse)": {
-   "ok": true,
-   "count": 42
-  },
   "Fivetran (Greenhouse)": {
    "ok": true,
    "count": 159
   },
+  "Epic Games (Greenhouse)": {
+   "ok": true,
+   "count": 130
+  },
   "Algolia (Greenhouse)": {
    "ok": true,
    "count": 28
-  },
-  "Epic Games (Greenhouse)": {
-   "ok": true,
-   "count": 133
   },
   "WHOOP (Lever)": {
    "ok": true,
@@ -259,87 +259,87 @@
   },
   "Riot Games (Greenhouse)": {
    "ok": true,
-   "count": 188
+   "count": 187
   },
   "Formlabs (Greenhouse)": {
    "ok": true,
-   "count": 240
-  },
-  "Oscar Health (Greenhouse)": {
-   "ok": true,
-   "count": 210
-  },
-  "Spotify (Lever)": {
-   "ok": true,
-   "count": 86
+   "count": 238
   },
   "Verkada (Greenhouse)": {
    "ok": true,
-   "count": 339
+   "count": 344
+  },
+  "Oscar Health (Greenhouse)": {
+   "ok": true,
+   "count": 206
   },
   "Outreach (Lever)": {
    "ok": true,
    "count": 22
   },
-  "Zoox (Lever)": {
+  "Databricks (Greenhouse)": {
    "ok": true,
-   "count": 229
+   "count": 928
+  },
+  "Wealthfront (Lever)": {
+   "ok": true,
+   "count": 23
+  },
+  "Spotify (Lever)": {
+   "ok": true,
+   "count": 85
   },
   "Linear (Ashby)": {
    "ok": true,
-   "count": 31
+   "count": 32
   },
   "DoorDash (Greenhouse)": {
    "ok": true,
-   "count": 438
-  },
-  "Match Group (Lever)": {
-   "ok": true,
-   "count": 61
-  },
-  "PostHog (Ashby)": {
-   "ok": true,
-   "count": 8
+   "count": 435
   },
   "Deel (Ashby)": {
    "ok": true,
    "count": 0
   },
+  "Anthropic (Greenhouse)": {
+   "ok": true,
+   "count": 673
+  },
   "Elastic (Greenhouse)": {
    "ok": true,
-   "count": 428
+   "count": 422
   },
-  "Supabase (Ashby)": {
+  "Match Group (Lever)": {
    "ok": true,
-   "count": 70
+   "count": 71
   },
-  "Palantir (Lever)": {
+  "PostHog (Ashby)": {
    "ok": true,
-   "count": 306
+   "count": 10
   },
-  "Cursor (Ashby)": {
+  "Zoox (Lever)": {
    "ok": true,
-   "count": 120
+   "count": 238
   },
   "Replit (Ashby)": {
    "ok": true,
    "count": 28
   },
-  "Anthropic (Greenhouse)": {
+  "Supabase (Ashby)": {
    "ok": true,
-   "count": 680
+   "count": 71
   },
-  "Hex (Ashby)": {
+  "Cursor (Ashby)": {
    "ok": true,
-   "count": 39
-  },
-  "Vanta (Ashby)": {
-   "ok": true,
-   "count": 84
+   "count": 121
   },
   "Confluent (Ashby)": {
    "ok": true,
    "count": 0
+  },
+  "Vanta (Ashby)": {
+   "ok": true,
+   "count": 84
   },
   "Mercury (Ashby)": {
    "ok": true,
@@ -347,31 +347,48 @@
   },
   "Notion (Ashby)": {
    "ok": true,
-   "count": 150
-  },
-  "Ramp (Ashby)": {
-   "ok": true,
-   "count": 170
+   "count": 152
   },
   "Zapier (Ashby)": {
    "ok": true,
    "count": 10
   },
-  "Modal (Ashby)": {
+  "Hex (Ashby)": {
    "ok": true,
-   "count": 42
-  },
-  "Perplexity (Ashby)": {
-   "ok": true,
-   "count": 138
+   "count": 39
   },
   "Runway (Ashby)": {
    "ok": true,
    "count": 3
   },
+  "Palantir (Lever)": {
+   "ok": true,
+   "count": 305
+  },
+  "ElevenLabs (Ashby)": {
+   "ok": true,
+   "count": 141
+  },
+  "Modal (Ashby)": {
+   "ok": true,
+   "count": 42
+  },
+  "Ramp (Ashby)": {
+   "ok": true,
+   "count": 171
+  },
   "Watershed (Ashby)": {
    "ok": true,
    "count": 39
+  },
+  "Perplexity (Ashby)": {
+   "ok": true,
+   "count": 136
+  },
+  "ezCater (auto-detect)": {
+   "ok": true,
+   "count": 0,
+   "note": "found on Lever as 'ezcater'"
   },
   "Benchling (Ashby)": {
    "ok": true,
@@ -379,125 +396,108 @@
   },
   "Cohere (Ashby)": {
    "ok": true,
-   "count": 118
+   "count": 122
   },
-  "ElevenLabs (Ashby)": {
+  "Attentive (auto-detect)": {
    "ok": true,
-   "count": 144
+   "count": 27,
+   "note": "found on Greenhouse as 'attentive'"
   },
   "Niantic (auto-detect)": {
    "ok": true,
    "count": 0,
    "note": "found on Ashby as 'niantic'"
   },
-  "ezCater (auto-detect)": {
-   "ok": true,
-   "count": 0,
-   "note": "found on Lever as 'ezcater'"
-  },
-  "Hudson River Trading (auto-detect)": {
-   "ok": true,
-   "count": 0,
-   "note": "found on Ashby as 'hrt'"
-  },
   "Visa (Smartrecruiters)": {
    "ok": true,
    "count": 0
-  },
-  "Attentive (auto-detect)": {
-   "ok": true,
-   "count": 25,
-   "note": "found on Greenhouse as 'attentive'"
-  },
-  "Shield AI (Lever)": {
-   "ok": true,
-   "count": 655
   },
   "Adzuna": {
    "ok": null,
    "count": 0,
    "note": "turned off (Adzuna keys not set)"
   },
+  "Shield AI (Lever)": {
+   "ok": true,
+   "count": 661
+  },
+  "Ro (auto-detect)": {
+   "ok": true,
+   "count": 55,
+   "note": "found on Lever as 'ro'"
+  },
+  "Amplitude (auto-detect)": {
+   "ok": true,
+   "count": 52,
+   "note": "found on Ashby as 'amplitude'"
+  },
+  "Clay (auto-detect)": {
+   "ok": true,
+   "count": 63,
+   "note": "found on Ashby as 'claylabs'"
+  },
+  "Harvey (Ashby)": {
+   "ok": true,
+   "count": 369
+  },
+  "Plaid (auto-detect)": {
+   "ok": true,
+   "count": 144,
+   "note": "found on Ashby as 'plaid'"
+  },
   "Veeva Systems (Lever)": {
    "ok": true,
    "count": 878
   },
-  "Harvey (Ashby)": {
-   "ok": true,
-   "count": 362
-  },
-  "Amplitude (auto-detect)": {
-   "ok": true,
-   "count": 51,
-   "note": "found on Ashby as 'amplitude'"
-  },
-  "Plaid (auto-detect)": {
-   "ok": true,
-   "count": 145,
-   "note": "found on Ashby as 'plaid'"
-  },
   "Remotive": {
    "ok": true,
-   "count": 10
+   "count": 12
   },
   "HubSpot (auto-detect)": {
    "ok": true,
-   "count": 113,
+   "count": 121,
    "note": "found on Greenhouse as 'hubspotjobs'"
-  },
-  "Himalayas": {
-   "ok": true,
-   "count": 35
-  },
-  "Databricks (Greenhouse)": {
-   "ok": true,
-   "count": 925
-  },
-  "Clay (auto-detect)": {
-   "ok": true,
-   "count": 62,
-   "note": "found on Ashby as 'claylabs'"
   },
   "USAJOBS": {
    "ok": true,
-   "count": 38
+   "count": 43
+  },
+  "Hudson River Trading (auto-detect)": {
+   "ok": true,
+   "count": 0,
+   "note": "found on Ashby as 'hrt'"
+  },
+  "Himalayas": {
+   "ok": true,
+   "count": 29
+  },
+  "OpenAI (Ashby)": {
+   "ok": true,
+   "count": 820
+  },
+  "SimplifyJobs New-Grad list": {
+   "ok": true,
+   "count": 3222
   },
   "Remote OK": {
    "ok": true,
    "count": 99
   },
-  "OpenAI (Ashby)": {
-   "ok": true,
-   "count": 816
-  },
   "Amazon Jobs": {
    "ok": true,
    "count": 200
   },
-  "SimplifyJobs New-Grad list": {
+  "Anduril (Greenhouse)": {
    "ok": true,
-   "count": 3239
+   "count": 2579
   },
   "SpaceX (Greenhouse)": {
    "ok": true,
-   "count": 2887
-  },
-  "Anduril (Greenhouse)": {
-   "ok": true,
-   "count": 2573
-  },
-  "Wealthfront (Lever)": {
-   "ok": true,
-   "count": 23
+   "count": 2896
   },
   "JSearch (Google for Jobs)": {
    "ok": true,
-   "count": 37
-  },
-  "Ro (auto-detect)": {
-   "ok": false,
-   "count": 0,
-   "error": "HTTPSConnectionPool(host='api.lever.co', port=443): Read timed out. (read timeout=25)"
+   "count": 38
   }
  }
 }
